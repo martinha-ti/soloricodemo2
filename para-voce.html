@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Rico</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+/*topo das telas*/
+.page-header {
+    background: linear-gradient(to right, #3b7d1c, #6bbf34, #f7d51c);
+    height: 250px; /* Altura do banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.page-banner {
+    background-image: url('assets/img/banner-about.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px; /* Ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.container h2{padding-top: 30px;}
+
+/* Seção Sobre a Empresa */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 90px 0;
+}
+
+.about-image {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    color: #333;
+}
+
+.about-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.about-list i {
+    color: #28a745;
+    margin-right: 8px;
+}
+
+/* Missão, Visão e Valores */
+.mission-vision-values .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.mission-vision-values .card:hover {
+    transform: scale(1.05);
+}
+
+.mission-vision-values .card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.mission-vision-values .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Equipe */
+.team-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.team-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+.team-image {
+    border-radius: 50%;
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.team-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.team-role {
+    font-size: 1rem;
+    color: #28a745;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .mission-vision-values .card {
+        margin-bottom: 20px;
+    }
+
+    .team-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Barra Superior -->
+    <div class="top-bar text-center">
+        <span><a href="#"></a></span>
+    </div>
+   <!-- Navbar -->
+   <header class="navbar-section" style="padding-top: 30px;">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" alt="Logo" class="navbar-logo">
+                <span class="navbar-subtitle"></span>
+            </a>
+            <!-- Botão de Menu Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+<!-- Links -->
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="empresa.html">A EMPRESA</a></li>
+        <li class="nav-item"><a class="nav-link" href="para-empresas.html">PARA EMPRESAS</a></li>
+        <li class="nav-item"><a class="nav-link" href="para-voce.html">PARA VOCÊ</a></li>
+        <li class="nav-item"><a class="nav-link" href="comex.html">COMEX</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                role="button" aria-expanded="false">
+                ATENDIMENTO
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                <li><a class="dropdown-item" href="franqueado.html">SEJA UM FRANQUEADO</a></li>
+                <li><a class="dropdown-item" href="trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
+                <li><a class="dropdown-item" href="sac.html">SAC</a></li>
+                <li><a class="dropdown-item" href="contatos.html">CONTATOS</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">LOJA</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                role="button" aria-expanded="false">
+                <img src="assets/img/Brazil.svg" alt="Brasil" class="navbar-flag"> Brasil
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Country 1</a></li>
+                <li><a class="dropdown-item" href="#">Country 2</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+        </li>
+    </ul>
+</div>
+</div>
+</nav>
+</header>
+    <!-- Cabeçalho -->
+    <!-- <header class="navbar navbar-expand-lg navbar-light">
+    </header> -->
+
+
+
+<!-- para voce -->
+<!-- Cabeçalho da Página -->
+<section class="page-header">
+    <div class="container text-center">
+        <h1>Para Você</h1>
+        <p>Encontre as melhores soluções Solo Rico para o seu dia a dia no campo.</p>
+    </div>
+</section>
+
+<!-- Seção: Benefícios para o Cliente -->
+<section class="client-benefits py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Texto -->
+            <div class="col-lg-6">
+                <h4 class="section-title">B2C Solo Rico Agrociências</h4>
+                <h2 class="section-heading">Soluções Diretas para o Produtor Rural</h2>
+                <p class="section-description">
+                    Na Solo Rico Agrociências, entendemos que cada lavoura tem suas particularidades. Por isso, oferecemos fertilizantes foliares, via solo e adjuvantes diretamente ao produtor rural, com um atendimento personalizado que respeita as necessidades de cada cliente, seja ele de pequeno, médio ou grande porte.
+                    Nosso modelo de venda por telefone, conduzido por franqueados especializados, permite uma comunicação direta, ágil e eficaz. Além disso, oferecemos:
+                </p>
+                <ul class="benefits-list col-lg-12">
+                    <li><i class="fas fa-leaf"></i> Logística Simplificada: Entrega eficiente, garantindo que o produtor receba os produtos no momento certo.
+                    </li>
+                    <li><i class="fas fa-seedling"></i> Formas de Pagamento Acessíveis: Condições que facilitam o acesso às melhores soluções para a lavoura.</li>
+                    <li><i class="fas fa-headset"></i> Plano Safra: Opções pensadas para acompanhar o ciclo produtivo do campo.</li>
+                </ul>
+                <a href="#" class="btn btn-success mt-3">Saiba Mais</a>
+            </div>
+            <!-- Imagem -->
+            <div class="col-lg-6 text-center">
+                <img src="assets/img/cliente-beneficios.jpg" alt="Benefícios" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção: Produtos em Destaque -->
+<section class="featured-products py-5">
+    <div class="container text-center">
+        <h4 class="section-title">Nossos Produtos</h4>
+        <h2 class="section-heading">O Que Oferecemos Para Você</h2>
+        <div class="row mt-4">
+            <!-- Produto 1 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="assets/img/product1.jpg" alt="Produto 1" class="product-image">
+                    <h5 class="product-title">Fertilizantes Via Solo</h5>
+                    <p class="product-description">Fertilizantes Via Solo
+
+                        Solucões inteligentes para o enriquecimento do seu solo.</p>
+                </div>
+            </div>
+            <!-- Produto 2 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="assets/img/product2.jpg" alt="Produto 2" class="product-image">
+                    <h5 class="product-title">Fertilizantes Foliares</h5>
+                    <p class="product-description">
+                        Soluções especificas para a nutrição das plantas.</p>
+                </div>
+            </div>
+            <!-- Produto 3 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="assets/img/product3.jpg" alt="Produto 3" class="product-image">
+                    <h5 class="product-title">Novas Tecnologias</h5>
+                    <p class="product-description">Soluções para otimização das suas aplicações.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Seção: Planejamento inteligente para quem faz o campo crescer -->
+<section class="testimonials py-5">
+    <div class="container text-center">
+        <h4 class="section-title">Planejamento inteligente para quem faz o campo crescer.</h4>
+        <h2 class="section-heading">Plano Safra Solo Rico: Mais Facilidade para o Produtor Rural</h2>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="testimonial-card text-start p-4">
+                    <p class="testimonial-text">
+                        Na Solo Rico Agrociências, sabemos que o sucesso no campo começa com um bom planejamento.
+                        O Plano Safra foi criado para garantir que o produtor tenha acesso aos fertilizantes certos no momento ideal, 
+                        sem comprometer o fluxo de caixa.
+                    </p>
+                    
+                    <h5 class="mt-4">Por que aderir ao Plano Safra?</h5>
+                    
+                    <ul class="benefits-list list-unstyled mt-3">
+                        <li class="d-flex align-items-center">
+                            <i class="fas fa-leaf me-2 text-success"></i> 
+                            <strong>Compra no tempo certo: </strong> &nbsp;Financie diretamente com a Solo Rico e adquira seus insumos sem depender de crédito bancário.
+                        </li>
+                        <li class="d-flex align-items-center mt-2">
+                            <i class="fas fa-leaf me-2 text-success"></i> 
+                            <strong>Pagamento flexível: </strong> &nbsp;Prazos ajustados ao ciclo produtivo, facilitando o planejamento financeiro.
+                        </li>
+                        <li class="d-flex align-items-center mt-2">
+                            <i class="fas fa-leaf me-2 text-success"></i> 
+                            <strong>Juros justos: </strong> &nbsp;Condições competitivas, sem as taxas elevadas dos financiamentos tradicionais.
+                        </li>
+                        <li class="d-flex align-items-center mt-2">
+                            <i class="fas fa-leaf me-2 text-success"></i> 
+                            <strong>Segurança na colheita: </strong> &nbsp;Garanta os fertilizantes antes do plantio e maximize sua produtividade.
+                        </li>
+                    </ul>
+
+                    <p class="mt-4">
+                        Com o Plano Safra Solo Rico, você investe hoje e paga no tempo certo, com mais tranquilidade e melhores resultados para sua lavoura.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Seção: Chamada para Ação -->
+<section class="call-to-action py-5 text-center">
+    <div class="container">
+        <h2 class="section-heading text-white">Pronto para Transformar sua Produção?</h2>
+        <p class="text-white">Entre em contato e descubra como podemos ajudar você a alcançar seus objetivos.</p>
+        <a href="#" class="btn btn-light btn-lg mt-3">Fale Conosco</a>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer-section py-5">
+        <div class="container">
+            <!-- Logo e Descrição -->
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <img src="assets/img/div.elementor-element.png" alt="Logo Solo Rico" class="footer-logo mb-3">
+                    <p class="footer-description mx-auto">
+                        There are many variations of passages of lorem ipsum available, but the majority suffered.
+                        <br> Atendimento a clientes, colaboradores e empresas de segunda a sexta-feira das 09h às 18h
+                        (exceto feriados).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Menus e Informações -->
+            <div class="row">
+                <!-- Menu -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <h5 class="footer-heading">Menu</h5>
+                    <ul class="footer-menu list-unstyled">
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Menu</a></li>
+                    </ul>
+                </div>
+
+                <!-- Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <h5 class="footer-heading">Blog</h5>
+                    <ul class="footer-blog list-unstyled">
+                        <li>
+                            <a href="#">Lorem Food Production Back To Cities</a>
+                            <span>Jul, 2025</span>
+                        </li>
+                        <li>
+                            <a href="#">Lorem Food Production Back To Cities</a>
+                            <span>Jan, 2025</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Atendimento -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <h5 class="footer-heading">Atendimento</h5>
+                    <ul class="footer-contact list-unstyled">
+                        <li><i class="fas fa-phone"></i> 555 888 0000</li>
+                        <li><i class="fas fa-envelope"></i> email@solorico.com.br</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Lorem Ipsum, 1234<br>S. J. Rio Preto SP., Brasil
+                        </li>
+                    </ul>
+                    <form class="footer-form mt-3">
+                        <input type="text" class="form-control" placeholder="Dúvidas?">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom text-center mt-4">
+                <p>&copy; All Copyright 2025 by Martinha TI</p>
+                <a href="#">Política e Privacidade</a> | <a href="#">Central de Atendimento</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

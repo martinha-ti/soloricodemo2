@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Rico</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /*topo das telas*/
+        .page-header {
+            background: linear-gradient(to right, #3b7d1c, #6bbf34, #f7d51c);
+            height: 250px;
+            /* Altura do banner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .page-banner {
+            background-image: url('assets/img/banner-about.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            /* Ajuste conforme necessário */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .container h2 {
+            padding-top: 30px;
+        }
+
+        /* Seção Sobre a Empresa */
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 90px 0;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            max-width: 100%;
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+            color: #333;
+        }
+
+        .about-list li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .about-list i {
+            color: #28a745;
+            margin-right: 8px;
+        }
+
+        /* Missão, Visão e Valores */
+        .mission-vision-values .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .mission-vision-values .card:hover {
+            transform: scale(1.05);
+        }
+
+        .mission-vision-values .card-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .mission-vision-values .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Equipe */
+        .team-section {
+            background-color: #ffffff;
+            padding: 60px 0;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+        }
+
+        .team-image {
+            border-radius: 50%;
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        .team-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .team-role {
+            font-size: 1rem;
+            color: #28a745;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .mission-vision-values .card {
+                margin-bottom: 20px;
+            }
+
+            .team-card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra Superior -->
+    <div class="top-bar text-center">
+        <span><a href="#"></a></span>
+    </div>
+    <!-- Navbar -->
+    <header class="navbar-section" style="padding-top: 30px;">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" alt="Logo" class="navbar-logo">
+                    <span class="navbar-subtitle"></span>
+                </a>
+                <!-- Botão de Menu Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="empresa.html">A EMPRESA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="para-empresas.html">PARA EMPRESAS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="para-voce.html">PARA VOCÊ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="comex.html">COMEX</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                                role="button" aria-expanded="false">
+                                ATENDIMENTO
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <li><a class="dropdown-item" href="franqueado.html">SEJA UM FRANQUEADO</a></li>
+                                <li><a class="dropdown-item" href="trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
+                                <li><a class="dropdown-item" href="sac.html">SAC</a></li>
+                                <li><a class="dropdown-item" href="contatos.html">CONTATOS</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">LOJA</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                                role="button" aria-expanded="false">
+                                <img src="assets/img/Brazil.svg" alt="Brasil" class="navbar-flag"> Brasil
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Country 1</a></li>
+                                <li><a class="dropdown-item" href="#">Country 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Cabeçalho -->
+    <!-- <header class="navbar navbar-expand-lg navbar-light">
+    </header> -->
+
+
+
+    <!-- para empresas -->
+    <!-- Cabeçalho da Página -->
+    <section class="page-header">
+        <!-- <div class="container text-center">
+        <h1>Para Empresas</h1>
+        <p>Conheça as soluções personalizadas da Solo Rico para o setor empresarial.</p>
+    </div> -->
+    </section>
+
+    <!-- Seção: Benefícios para Empresas -->
+    <section class="benefits-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Imagem -->
+                <div class="col-lg-6 text-center">
+                    <img src="assets/img/business-benefits.jpg" alt="Benefícios" class="img-fluid rounded">
+                </div>
+                <!-- Conteúdo -->
+                <div class="col-lg-6">
+                    <h4 class="section-title">Vantagens para sua Empresa</h4>
+                    <h2 class="section-heading">Soluções Agro Inteligentes</h2>
+                    <p class="section-description">
+                        A Solo Rico oferece uma gama de soluções personalizadas para empresas do setor agrícola,
+                        garantindo inovação, produtividade e sustentabilidade para o seu negócio.
+                    </p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Tecnologia de ponta e matérias-primas de excelência</li>
+                        <li><i class="fas fa-check-circle"></i> Logística rápida e eficiência operacional</li>
+                        <li><i class="fas fa-check-circle"></i> Consultoria especializada e suporte técnico contínuo
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-success mt-3">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Nossas Soluções -->
+    <!-- Seção: Nossas Soluções -->
+    <section class="solutions-section py-5">
+        <div class="container text-center col-lg-9">
+            <h4 class="section-title">Modelos de Negócios</h4>
+            <h2 class="section-heading">Revendas | Cooperativas | Distribuidores</h2>
+            <p style="line-height: 30px; margin-top: 2rem; margin-bottom: 2rem;">
+                Nosso trabalho junto aos lojistas garante acesso a soluções inovadoras e tecnologias de ponta, com um
+                portfólio constantemente atualizado. Além disso, operamos com atendimento direto da indústria, sem
+                intermediários, proporcionando mais agilidade nos processos de compra, entrega e, consequentemente,
+                maior margem de lucro para o lojista.
+                No modelo B2B, oferecemos diversas oportunidades de negócio, destacando-se pela flexibilidade e
+                eficiência:
+            </p>
+            <div class="row mt-4">
+                <!-- Solução 1 -->
+                <div class="col-md-3 d-flex">
+                    <div class="solution-card h-100 d-flex flex-column">
+                        <img src="assets/img/solution1.jpg" alt="Solução 1" class="img-fluid">
+                        <h5 class="solution-title mt-3">Bandeira Solo Rico</h5>
+                        <p class="solution-description flex-grow-1">
+                            Revenda produtos com a força da Bandeira Solo Rico, uma marca consolidada, com mais de 30
+                            anos de experiência no mercado.
+                        </p>
+                    </div>
+                </div>
+                <!-- Solução 2 -->
+                <div class="col-md-3 d-flex">
+                    <div class="solution-card h-100 d-flex flex-column">
+                        <img src="assets/img/solution2.jpg" alt="Solução 2" class="img-fluid">
+                        <h5 class="solution-title mt-3">Marca Própria</h5>
+                        <p class="solution-description flex-grow-1">
+                            Fabricamos produtos para que nossos clientes atuem com a sua marca no mercado.
+                        </p>
+                    </div>
+                </div>
+                <!-- Solução 3 -->
+                <div class="col-md-3 d-flex">
+                    <div class="solution-card h-100 d-flex flex-column">
+                        <img src="assets/img/solution3.jpg" alt="Solução 3" class="img-fluid">
+                        <h5 class="solution-title mt-3">Marca Própria Express</h5>
+                        <p class="solution-description flex-grow-1">
+                            Nosso time ajuda sua empresa a alcançar o máximo potencial com produtos personalizados.
+                        </p>
+                    </div>
+                </div>
+                <!-- Solução 4 -->
+                <div class="col-md-3 d-flex">
+                    <div class="solution-card h-100 d-flex flex-column">
+                        <img src="assets/img/solution4.jpg" alt="Solução 4" class="img-fluid">
+                        <h5 class="solution-title mt-3">Atacado Agro</h5>
+                        <p class="solution-description flex-grow-1">
+                            Oferecemos soluções no atacado para abastecer sua revenda com preços diferenciados e alta
+                            qualidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Seção: Cases de Sucesso -->
+    <section class="cases-section py-5">
+        <div class="container text-center col-lg-9">
+            <h4 class="section-title">Modelos de Negócios</h4>
+            <h2 class="section-heading">Usinas | Indústrias do Setor Agro</h2>
+            <p style="line-height: 30px; margin-top: 2rem; margin-bottom: 2rem;">
+                No setor industrial, nosso foco é o fornecimento de matérias-primas e formulações prontas, ideais para a
+                fabricação de novos produtos com alto padrão de qualidade.
+                Nos diferenciamos pela tecnologia de ponta, um portfólio diversificado e uma logística simplificada,
+                garantindo processos ágeis e eficientes.
+                Sempre atentos às tendências do mercado global, buscamos inovação contínua e as melhores soluções em
+                custo-benefício para nossos clientes.
+            </p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="case-card">
+                        <img src="assets/img/case1.jpg" alt="Case 1" class="case-image">
+                        <h5 class="case-title">Matérias Primas</h5>
+                        <p class="case-description">Matérias-primas
+
+                            Fornecemos insumos de alta qualidade para a formulação de novos produtos, garantindo
+                            eficiência e performance.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="case-card">
+                        <img src="assets/img/case2.jpg" alt="Case 2" class="case-image">
+                        <h5 class="case-title">Formulações Prontas</h5>
+                        <p class="case-description">Desenvolvemos soluções formuladas para aplicação direta na lavoura
+                            ou para a fabricação de novos produtos, assegurando inovação e alto rendimento para o setor
+                            agroindustrial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer-section py-5">
+        <div class="container">
+            <!-- Logo e Descrição -->
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <img src="assets/img/div.elementor-element.png" alt="Logo Solo Rico" class="footer-logo mb-3">
+                    <p class="footer-description mx-auto">
+                        There are many variations of passages of lorem ipsum available, but the majority suffered.
+                        <br> Atendimento a clientes, colaboradores e empresas de segunda a sexta-feira das 09h às 18h
+                        (exceto feriados).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Menus e Informações -->
+            <div class="row">
+                <!-- Menu -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <h5 class="footer-heading">Menu</h5>
+                    <ul class="footer-menu list-unstyled">
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Menu</a></li>
+                    </ul>
+                </div>
+
+                <!-- Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <h5 class="footer-heading">Blog</h5>
+                    <ul class="footer-blog list-unstyled">
+                        <li>
+                            <a href="#">Lorem Food Production Back To Cities</a>
+                            <span>Jul, 2025</span>
+                        </li>
+                        <li>
+                            <a href="#">Lorem Food Production Back To Cities</a>
+                            <span>Jan, 2025</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Atendimento -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <h5 class="footer-heading">Atendimento</h5>
+                    <ul class="footer-contact list-unstyled">
+                        <li><i class="fas fa-phone"></i> 555 888 0000</li>
+                        <li><i class="fas fa-envelope"></i> email@solorico.com.br</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Lorem Ipsum, 1234<br>S. J. Rio Preto SP., Brasil
+                        </li>
+                    </ul>
+                    <form class="footer-form mt-3">
+                        <input type="text" class="form-control" placeholder="Dúvidas?">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom text-center mt-4">
+                <p>&copy; All Copyright 2025 by Martinha TI</p>
+                <a href="#">Política e Privacidade</a> | <a href="#">Central de Atendimento</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
